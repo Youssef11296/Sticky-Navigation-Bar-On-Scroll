@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing:border-box;
+}
+body{
+    min-height:200vh;
+}
+
+/* Normal Header */
+
+header{
+    position:relative;
+    top:10px;
+    left:0;
+    height:10vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    color:#fff;
+    z-index:1000;
+    transition:all .6s ease-in-out;
+}
+header .logo{
+    font-size:2rem;
+    font-weight:700;
+    text-transform:uppercase;
+}
+header ul{
+    width:40%;
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    list-style:none;    
+}
+header ul li a{
+    color:#fff;
+    font-size:1.2rem;
+    font-weight:500;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition:all .6s ease-in-out;
+}
+header ul li a:not(:first-child){
+    margin-left:10px;
+}
+header .icon{
+    display:none;
+    cursor:pointer;
+}
+header .icon .line{
+    width:30px;
+    height:3px;
+    background-color:#fff;
+}
+header .icon .line:not(:first-child)
+{
+    margin-top:6px;
+}
+
+/* Sticky Header */
+
+header.sticky{
+    position:sticky;
+    top:0;
+    padding:5px 120px;
+    color:#000;
+    background-color:#fff;
+}
+
+header.sticky ul li a{
+    color:#000;
+}
+
+header.sticky .icon .line{
+    background-color:#000;
+}
+
+/* Banner Section */
+
+.banner{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-image:url('./images/img.webp');
+    background-size:cover;
+    background-position:center;
+}
+
+/* Media Quiries */
+
+@media screen and (max-width:900px){
+    header ul{
+        width:60%;
+    }
+}
+@media screen and (max-width:800px){
+    header ul{
+        display:none;
+    }
+    header .icon{
+        display:block;
+    }
+}
